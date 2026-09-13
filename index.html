@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman 2</title>
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/main.css" />
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+        <div class="game-info">
+            <div class="game-name"><i class="fa-solid fa-gamepad fa-bounce"></i> Hangman Game</div>
+            <div class="category">
+                Word From: <span></span>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="hangman-draw">
+                <div class="the-draw">
+                    <div class="the-stand"></div>
+                    <div class="the-hang"></div>
+                    <div class="the-rope"></div>
+                    <div class="the-man">
+                        <div class="head"></div>
+                        <div class="body"></div>
+                        <div class="hands"></div>
+                        <div class="legs"></div>
+                    </div>
+                       <div class="the-face">
+                            <div class="R-eye"></div>
+                            <div class="L-eye"></div>
+                            <div class="R-eye2"></div>
+                            <div class="L-eye2"></div>
+                            <div class="mouse"></div>
+                        </div>
+                </div>
+            </div>
+            <div class="letters"></div>
+        </div>
+        <hr>
+        <div class="guess-letters"></div>
+          <div class="restart">
+        <button class="restart1" onclick="location.reload()">restart</button>
+    </div>
+        <!-- <audio id="success" src="Audio/success - Sound Effect.mp4"  preload="auto"></audio>
+    <audio id="wrong" src="Audio/success - Sound Effect (2).mp4"  preload="auto"></audio> -->
+    </div>
+    <script src="JS/main.js"></script>
+  </body>
+</html>
