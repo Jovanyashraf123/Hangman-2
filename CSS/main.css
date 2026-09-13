@@ -270,33 +270,33 @@ hr {
   display: block;
 }
 .hangman-draw.wrong-2 .the-stand::before,
-.hangman-draw.wrong-2 .the-stand::after{
+.hangman-draw.wrong-2 .the-stand::after {
   display: block;
 }
 .hangman-draw.wrong-3 .the-hang::before,
-.hangman-draw.wrong-3 .the-hang::after{
+.hangman-draw.wrong-3 .the-hang::after {
   display: block;
 }
-.hangman-draw.wrong-4 .the-rope{
+.hangman-draw.wrong-4 .the-rope {
   display: block;
 }
-.hangman-draw.wrong-5 .head{
+.hangman-draw.wrong-5 .head {
   display: block;
 }
-.hangman-draw.wrong-6 .body{
+.hangman-draw.wrong-6 .body {
   display: block;
 }
-.hangman-draw.wrong-7 .hands::before{
+.hangman-draw.wrong-7 .hands::before {
   display: block;
 }
-.hangman-draw.wrong-8 .hands::after{
-    display: block;
-}
-.hangman-draw.wrong-9 .legs::before{
+.hangman-draw.wrong-8 .hands::after {
   display: block;
 }
-.hangman-draw.wrong-10 .legs::after{
-    display: block;
+.hangman-draw.wrong-9 .legs::before {
+  display: block;
+}
+.hangman-draw.wrong-10 .legs::after {
+  display: block;
 }
 .hangman-draw.wrong-10 .R-eye {
   display: block;
@@ -332,11 +332,11 @@ hr {
   cursor: pointer;
   border-radius: 6px;
 }
-.letters .letter-box.clicked{
-    background-color: #8A6D3A;
-    opacity: 0.5;
-    pointer-events: none;
-    color: white;
+.letters .letter-box.clicked {
+  background-color: #8a6d3a;
+  opacity: 0.5;
+  pointer-events: none;
+  color: white;
 }
 .letters .letter-box:hover {
   background-color: var(--third-color);
@@ -344,45 +344,44 @@ hr {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(26, 188, 156, 0.4);
 }
-.guess-letters{
-    min-height: 104px;
-    background-color: var(--third-color);
-    margin: 10px auto;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
+.guess-letters {
+  min-height: 104px;
+  background-color: var(--third-color);
+  margin: 10px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
-.guess-letters span{
-    width: 55px;
-    height: 55px;
-    background-color: var(--secound-color);
-    margin-right: 10px;
-    border-bottom: 4px solid black;
-    align-items: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 55px;
-    display: flex;
-    justify-content: center;
-    color: white;
+.guess-letters span {
+  width: 55px;
+  height: 55px;
+  background-color: var(--secound-color);
+  margin-right: 10px;
+  border-bottom: 4px solid black;
+  align-items: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 55px;
+  display: flex;
+  justify-content: center;
+  color: white;
 }
-.guess-letters span.with-space{
-    background: none;
-    border: none;
-    position: relative;
-
+.guess-letters span.with-space {
+  background: none;
+  border: none;
+  position: relative;
 }
-.guess-letters span.with-space::before{
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 4px;
-    background-color: var(--secound-color);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
+.guess-letters span.with-space::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  background-color: var(--secound-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .letters.finshed {
   pointer-events: none;
@@ -452,17 +451,36 @@ hr {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(26, 188, 156, 0.4);
 }
+.footer {
+  background-color: var(--third-color);
+  padding: 20px;
+  margin-top: 53px;
+}
+.footer .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+.footer .title span {
+  margin-left: 7px;
+  color: var(--secound-color);
+}
 /* ============ نسخة الموبايل من الرسمة (نفس التصميم بمقاس أصغر) ============ */
 @media (max-width: 768px) {
   .row {
     flex-direction: column;
   }
-  .restart{
+  .footer .title {
+    font-size: 18px;
+  }
+  .restart {
     padding: 20px;
     display: flex;
     justify-content: center;
     transform: scale(0.8);
-}
+  }
   .game-info .game-name {
     font-size: 13px;
   }
@@ -521,7 +539,7 @@ hr {
   .hangman-draw .head {
     width: 39px;
     height: 39px;
-   
+
     top: 31px;
     left: 92px;
   }
