@@ -451,29 +451,10 @@ hr {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(26, 188, 156, 0.4);
 }
-.footer {
-  background-color: var(--third-color);
-  padding: 20px;
-  margin-top: 53px;
-}
-.footer .title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-}
-.footer .title span {
-  margin-left: 7px;
-  color: var(--secound-color);
-}
 /* ============ نسخة الموبايل من الرسمة (نفس التصميم بمقاس أصغر) ============ */
 @media (max-width: 768px) {
   .row {
     flex-direction: column;
-  }
-  .footer .title {
-    font-size: 18px;
   }
   .restart {
     padding: 20px;
