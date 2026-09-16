@@ -168,10 +168,6 @@ function WinGame(){
   div.className = "gameover";
   document.body.appendChild(div);
 }
-
-// if ('serviceWorker' in navigator) {
-//   navigator.serviceWorker.register('service-worker.js');
-// }
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./service-worker.js')
@@ -179,7 +175,7 @@ if ('serviceWorker' in navigator) {
       .catch((err) => console.log('Service Worker failed ❌', err));
   });
 }
-// ===============================ظظ
+// ===============================
 
 let deferredPrompt;
 const installBtn = document.getElementById('installBtn');

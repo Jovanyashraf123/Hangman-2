@@ -643,4 +643,13 @@ hr {
   font-size: 14px;
   font-weight: bold;
   padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+#installBtn:hover {
+  background-color: var(--third-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 188, 156, 0.4);
 }
