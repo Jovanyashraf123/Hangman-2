@@ -169,6 +169,13 @@ function WinGame(){
   document.body.appendChild(div);
 }
 
+// if ('serviceWorker' in navigator) {
+//   navigator.serviceWorker.register('service-worker.js');
+// }
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js');
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(() => console.log('Service Worker registered ✅'))
+      .catch((err) => console.log('Service Worker failed ❌', err));
+  });
 }
