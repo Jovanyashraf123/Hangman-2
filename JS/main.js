@@ -168,3 +168,7 @@ function WinGame(){
   div.className = "gameover";
   document.body.appendChild(div);
 }
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
