@@ -634,3 +634,13 @@ hr {
   color: white;
   font-size: 40px;
 }
+#installBtn {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  margin: 20px auto;
+  background-color: var(--third-color);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 15px;
+}

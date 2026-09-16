@@ -179,3 +179,43 @@ if ('serviceWorker' in navigator) {
       .catch((err) => console.log('Service Worker failed ❌', err));
   });
 }
+// ===============================ظظ
+
+let deferredPrompt;
+const installBtn = document.getElementById('installBtn');
+
+// المتصفح بيبعت الحدث ده لو الموقع مؤهل للتثبيت (manifest + service worker صح)
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault(); // امنع النافذة التلقائية من كروم
+  deferredPrompt = e; // احتفظ بالحدث عشان نستخدمه لما المستخدم يدوس الزرار
+  installBtn.style.display = 'block'; // اظهر الزرار بس لو التثبيت متاح فعلاً
+});
+
+installBtn.addEventListener('click', async () => {
+  if (!deferredPrompt) return;
+
+  deferredPrompt.prompt(); // اظهر نافذة التثبيت الحقيقية
+  const { outcome } = await deferredPrompt.userChoice; // استنى قرار المستخدم
+
+  if (outcome === 'accepted') {
+    console.log('المستخدم وافق على التثبيت ✅');
+  } else {
+    console.log('المستخدم رفض التثبيت ❌');
+  }
+
+  deferredPrompt = null;
+  installBtn.style.display = 'none'; // اخفي الزرار بعد الاستخدام
+});
+
+// لو التطبيق اتثبت بالفعل، اخفي الزرار
+window.addEventListener('appinstalled', () => {
+  installBtn.style.display = 'none';
+  console.log('التطبيق اتثبت بنجاح 🎉');
+});
+// =======================
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+if (isIOS) {
+  installBtn.style.display = 'block';
+  installBtn.textContent = 'اضغط مشاركة ثم "إضافة للشاشة الرئيسية"';
+  installBtn.onclick = () => alert('من زر المشاركة (Share) في سفاري، اختر "Add to Home Screen"');
+}
